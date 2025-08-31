@@ -5,6 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ee1111;
+        }
+
+        h3 {
+            text-align: center;
+            color: #2255dd;
+            text-decoration: underline;
+        }
+
+        #para1 {
+            text-align: center;
+            margin-left: 100px;
+            margin-right: 100px;
+            color: coral;
+        }
+
+        #para2 {
+            text-align: center;
+            color: #7711dd;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+
+        #img-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            gap: 20px;
+        }
+
+        #img1,
+        #img2,
+        #img3 {
+            width: 100px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        #img1 {
+            border: 2px solid #5cd044;
+        }
+
+        #img2 {
+            border: 2px solid #d24545;
+        }
+
+        #img3 {
+            border: 2px solid #8b36db;
+        }
+        #img1:hover, #img2:hover, #img3:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 50px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -12,23 +100,23 @@
     <h1>WELCOME TO DTI-SAU</h1>
     <h3>Technology Digital and Innovation</h3>
     <hr />
-    <p>
+    <p id="para1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, laboriosam doloribus commodi facere enim
         rerum dicta tempore quaerat eum et iste, accusamus repellat repellendus. Repellendus magnam ducimus alias
         perferendis nam!
     </p>
     <hr />
-    <p>
+    <p id="para2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates provident nulla aspernatur quo
         eum non qui ullam eos quam enim autem! Vero, harum amet recusandae dignissimos unde nesciunt adipisci.
     </p>
     <hr />
-    <div>
-        <img src="./images/imgA.png" alt="imgA">
-        <img src="./images/imgB.png" alt="imgB">
-        <img src="./images/imgC.png" alt="imgC">
+    <div id="img-container">
+        <img src="./images/imgA.png" alt="imgA" id="img1" draggable="false">
+        <img src="./images/imgB.png" alt="imgB" id="img2" draggable="false">
+        <img src="./images/imgC.png" alt="imgC" id="img3" draggable="false">
     </div>
-    <div>
+    <div id="footer">
         <span>Created by Supanat</span>
         <span>Copyright &copy; 2025</span>
     </div>
